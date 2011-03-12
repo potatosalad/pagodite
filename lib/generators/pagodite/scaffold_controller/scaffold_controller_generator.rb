@@ -14,7 +14,7 @@ module Pagodite
       end
 
       def create_pagodite_controller_files
-        template 'public_controller.rb', File.join('app/controllers/pagodite', class_path, "#{controller_file_name}_controller.rb")
+        template 'pagodite_controller.rb', File.join('app/controllers/pagodite', class_path, "#{controller_file_name}_controller.rb")
       end
     end
   end
