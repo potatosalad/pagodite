@@ -2,5 +2,5 @@
 
 <%%= render 'form' %>
 
-<%%= link_to 'Show', @<%= singular_table_name %> %> |
-<%%= link_to 'Back', <%= index_helper %>_path %>
+<%%= link_to 'Show', [ :pagodite, @<%= singular_table_name %> ] %> |
+<%%= link_to 'Back', pagodite_<%= index_helper %>_path %>
