@@ -1,4 +1,4 @@
-class Pagodite::<%= controller_class_name %>Controller < ::ApplicationController
+class Pagodite::<%= controller_class_name %>Controller < Pagodite::ApplicationController
   # GET <%= route_url %>
   # GET <%= route_url %>.xml
   def index
