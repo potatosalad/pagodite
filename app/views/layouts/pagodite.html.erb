@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	  <title>Pagodite</title>
+    <%= stylesheet_link_tag 'pagodite/layout.css' %>
+    <%= javascript_include_tag 'bento/jquery-1.4.4.min', 'bento/rails', 'bento/bento', 'bento/jquery.address-1.2.2.min', 'bento/jquery-easing', 'bento/fileuploader', 'bento/jquery-ui-1.8.8.custom.min', 'bento/jquery.ui.core.min','bento/jquery.ui.mouse.min', 'bento/jquery.ui.position.min','bento/jquery.ui.sortable.min', 'bento/jquery.ui.widget.min' %>
+    <%= yield :head %>
+    <%= javascript_tag do %>
+    	<%= yield :javascript %>
+    <% end %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div class="full-area">
+      <div class="inner-area">
+      	<%= render :partial => 'pagodite/shared/flash_messages' %>
+		<div class="view-port">
+			<div class="view-port-container" style="width:1014px;">
+				<div style="float:left;padding:5px;">
+                  <%= yield %>
+				</div>
+			</div>
+		</div>
+      </div>
+    </div>
+  </body>
+</html>

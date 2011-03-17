@@ -1,10 +1,10 @@
 module Pagodite
   module Generators
-    class PagoditeGenerator < Rails::Generators::NamedBase
-      namespace "pagodite"
+    class DeviseGenerator < Rails::Generators::NamedBase
+      #namespace "pagodite"
       source_root File.expand_path("../templates", __FILE__)
 
-      hook_for :orm
+      hook_for :orm, :as => :pagodite
 
       def add_pagodite_routes
         route <<-CONTENTS

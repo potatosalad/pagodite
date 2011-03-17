@@ -1,9 +1,11 @@
 module Pagodite
   class ApplicationController < ::ApplicationController
-    before_filter :_authenticate!
-    before_filter :_authorize!
+    before_filter :authenticate_pagodite_user!
+    layout "pagodite"
+    #before_filter :_authenticate!
+    #before_filter :_authorize!
 
-    helper_method :_current_user
+    #helper_method :_current_user
 
   private
     def _authenticate!
